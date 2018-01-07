@@ -221,3 +221,6 @@ Read the Docs
 config.rst
 
 .vscode/
+
+3-translate-python-to-cpp/udacity-cpp-histogram-filter-project/cmake-build-debug/*
+3-translate-python-to-cpp/udacity-cpp-histogram-filter-project/cmake-build-debug/*/*

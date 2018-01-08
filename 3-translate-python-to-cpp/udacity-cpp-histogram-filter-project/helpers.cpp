@@ -88,7 +88,7 @@ vector<vector<float> > zeros(int height, int width) {
 }
 
 /**
-	TODO - implement this function.
+	DONE - implement this function.
 
     Blurs (and normalizes) a grid of probabilities by spreading 
     probability from each cell over a 3x3 "window" of cells. This 

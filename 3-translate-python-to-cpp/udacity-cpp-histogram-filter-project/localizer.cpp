@@ -18,7 +18,7 @@
 using namespace std;
 
 /**
-	TODO - implement this function 
+	DONE - implement this function
     
     Initializes a grid of beliefs to a uniform distribution. 
 
@@ -42,12 +42,25 @@ vector< vector <float> > initialize_beliefs(vector< vector <char> > grid) {
 	vector< vector <float> > newGrid;
 
 	// your code here
-	
+	int height = grid.size();
+	int width = grid[0].size();
+	int area = height * width;
+	float belief_per_cell = 1.0 / (float) area;
+
+	vector<float> row;
+
+	for (int i = 0; i < height; i++) {
+		row.clear();
+		for (int j = 0; j < width; j++) {
+			row.push_back(belief_per_cell);
+		}
+		newGrid.push_back(row);
+	}
 	return newGrid;
 }
 
 /**
-	TODO - implement this function 
+	DONE - implement this function
     
     Implements robot sensing by updating beliefs based on the 
     color of a sensor measurement 
@@ -92,8 +105,23 @@ vector< vector <float> > sense(char color,
 	vector< vector <float> > newGrid;
 
 	// your code here
+    int height = beliefs.size();
+    int width = beliefs[0].size();
 
-	return normalize(newGrid);
+    newGrid = zeros(height, width);
+
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            newGrid[i][j] = beliefs[i][j];
+            if (grid[i][j] == color) {
+                newGrid[i][j] *= p_hit;
+            } else {
+                newGrid[i][j] *= p_miss;
+            }
+        }
+    }
+
+    return normalize(newGrid);
 }
 
 
@@ -142,6 +170,21 @@ vector< vector <float> > move(int dy, int dx,
 	vector < vector <float> > newGrid;
 
 	// your code here
+    int height = beliefs.size();
+    int width = beliefs[0].size();
 
-	return blur(newGrid, blurring);
+    newGrid = zeros(height, width);
+
+    int new_i=0, new_j=0;
+
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            new_i = (i + dy) % height;
+            new_j = (j + dx) % width;
+            newGrid[new_i][new_j] = beliefs[i][j];
+        }
+    }
+
+    return blur(newGrid, blurring);
+
 }

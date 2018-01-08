@@ -101,7 +101,7 @@ bool test_helpers() {
 
 bool test_initialize() {
 	vector < vector <char> > map;
-	map = read_map("maps/m1.txt");
+	map = read_map("../maps/m1.txt");
 	int h = map.size();
 
 	if (h < 1) {
@@ -194,7 +194,7 @@ bool test_sense() {
 
 	char color = 'r';
 	vector < vector <char> > map;
-	map = read_map("maps/half_red.txt");
+	map = read_map("../maps/half_red.txt");
 	float p_hit, p_miss;
 	p_hit = 2.0;
 	p_miss = 1.0;

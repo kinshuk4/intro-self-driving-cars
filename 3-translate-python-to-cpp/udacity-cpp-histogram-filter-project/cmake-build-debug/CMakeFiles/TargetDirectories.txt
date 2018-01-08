@@ -1,3 +1,0 @@
-/Users/kchandra/Lyf/Kode/SCM/Github/k2/intro-self-driving-cars/3-translate-python-to-cpp/udacity-cpp-histogram-filter-project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/kchandra/Lyf/Kode/SCM/Github/k2/intro-self-driving-cars/3-translate-python-to-cpp/udacity-cpp-histogram-filter-project/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/kchandra/Lyf/Kode/SCM/Github/k2/intro-self-driving-cars/3-translate-python-to-cpp/udacity-cpp-histogram-filter-project/cmake-build-debug/CMakeFiles/udacity_cpp_histogram_filter_project.dir

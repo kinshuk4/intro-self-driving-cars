@@ -22,14 +22,20 @@ The nanodegree was subdivided into the following chapters:
 
 1. **JoyRide - Reverse parking of a self-driving car**
     ![](imgs/isdc-project-1.png)
+
 2. **Implementation of a Matrix Class in Python**
     ![](imgs/isdc-project-2.png)
     - [Source](3_5_Project_2_Implement_Matrix_Class/kalman_filter_demo.ipynb)
+
 3. **Translation of a Python Histogram Filter to C++**
-4. **A Star routing algorithm in Python**
+
+4. **Optimize histogram filter**
+
+5. **A-Star routing algorithm in Python**
     ![](imgs/isdc-project-4.png)
 
     ​
-5. **Computer Vision based Traffic Light Classifier**
+
+6. **Computer Vision based Traffic Light Classifier**
     ​
 
